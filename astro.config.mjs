@@ -11,22 +11,28 @@ export default defineConfig({
 			wrap: true,
 		},
 	},
-	site: 'https://matchbox.mezo.org',
+	site: 'https://matchbox.mallard.sh',
 	integrations: [
 		starlight({
 			title: 'Matchbox Docs',
+			components: {
+				Header: './src/overrides/Header.astro',
+				SocialIcons: './src/overrides/SocialIcons.astro',
+			},
 			favicon: '/favicon.svg',
 			logo: {
-				light: './src/assets/matchbox-logo-light.svg',
-				dark: './src/assets/matchbox-logo-dark.svg',
+				src: './src/assets/matchbox-logo.png',
 				replacesTitle: true,
 			},
 			customCss: [
 				'./src/styles/custom.css',
 			],
-			social: {
-				github: 'https://github.com/mezo-org',
-			},
+			social: [
+				// Hidden for now - uncomment when needed:
+				// { icon: 'github', label: 'GitHub', href: 'https://github.com/mezo-org' },
+				// { icon: 'discord', label: 'Discord', href: 'https://discord.mezo.org' },
+				// { icon: 'x.com', label: 'X', href: 'https://x.com/MezoNetwork' },
+			],
 			sidebar: [
 				{
 					label: 'Getting Started',

@@ -4,13 +4,19 @@
   --matchbox-black: #0D0D0D;
   --sl-content-width: 50rem;
   --sl-text-5xl: 3.5rem;
-  --sl-font: "RiformaLLWeb-Regular", sans-serif;
+  --sl-font: "Courier New", Courier, monospace;
+  --sl-font-mono: "Courier New", Courier, monospace;
   --sl-color-accent-low: #3D2200;
   --sl-color-accent: var(--matchbox-orange);
   --sl-color-accent-high: #FFD9A8;
   --sl-color-bg: var(--matchbox-black);
   --sl-color-bg-nav: #0A0A0A;
   --sl-color-bg-sidebar: #0A0A0A;
+}
+
+/* Force Courier New on all elements */
+html, body, * {
+  font-family: "Courier New", Courier, monospace !important;
 }
 
 /* Light mode overrides */
@@ -21,6 +27,12 @@
   --sl-color-bg: #FAFAFA;
   --sl-color-bg-nav: #FFFFFF;
   --sl-color-bg-sidebar: #F5F5F5;
+}
+
+/* Logo inversion for dark mode - the logo is dark text on transparent */
+:root:not([data-theme="light"]) .site-title img,
+:root:not([data-theme="light"]) .site-title svg {
+  filter: invert(1);
 }
 
 /* Prevent character-by-character text breaking */
@@ -40,7 +52,7 @@ p {
 
 /* Code styling - inline code should wrap, code blocks should scroll */
 code {
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-family: "Courier New", Courier, monospace;
   font-style: normal;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -89,12 +101,12 @@ main {
   box-sizing: border-box;
 }
 
-/* Fix italic/emphasis to use proper font (not cursive/script) */
+/* Fix italic/emphasis to use proper font */
 em,
 i,
 .sl-markdown-content em,
 .sl-markdown-content i {
-  font-family: var(--sl-font, "RiformaLLWeb-Regular", sans-serif);
+  font-family: var(--sl-font, "Courier New", Courier, monospace);
   font-style: italic;
   font-variant: normal;
   font-feature-settings: normal;
@@ -105,7 +117,7 @@ strong,
 b,
 .sl-markdown-content strong,
 .sl-markdown-content b {
-  font-family: var(--sl-font, "RiformaLLWeb-Regular", sans-serif);
+  font-family: var(--sl-font, "Courier New", Courier, monospace);
   font-weight: bold;
 }
 
@@ -147,8 +159,8 @@ b,
 
 .site-title svg,
 .site-title img {
-  max-height: 2.5rem;
-  height: 1.25rem;
+  max-height: 3rem;
+  height: 1.75rem;
   width: auto;
 }
 
