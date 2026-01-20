@@ -1,0 +1,193 @@
+:root {
+  --matchbox-orange: #F7931A;
+  --matchbox-orange-dark: #FF6B00;
+  --matchbox-black: #0D0D0D;
+  --sl-content-width: 50rem;
+  --sl-text-5xl: 3.5rem;
+  --sl-font: "RiformaLLWeb-Regular", sans-serif;
+  --sl-color-accent-low: #3D2200;
+  --sl-color-accent: var(--matchbox-orange);
+  --sl-color-accent-high: #FFD9A8;
+  --sl-color-bg: var(--matchbox-black);
+  --sl-color-bg-nav: #0A0A0A;
+  --sl-color-bg-sidebar: #0A0A0A;
+}
+
+/* Light mode overrides */
+:root[data-theme="light"] {
+  --sl-color-accent-low: #FFE8CC;
+  --sl-color-accent: var(--matchbox-orange);
+  --sl-color-accent-high: #4A2800;
+  --sl-color-bg: #FAFAFA;
+  --sl-color-bg-nav: #FFFFFF;
+  --sl-color-bg-sidebar: #F5F5F5;
+}
+
+/* Prevent character-by-character text breaking */
+.no-break {
+  word-break: keep-all;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Fix for dollar sign and text breaking issues */
+li,
+p {
+  word-break: normal;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Code styling - inline code should wrap, code blocks should scroll */
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-style: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Inline code - allow wrapping but prefer keeping together */
+:not(pre) > code {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: inline;
+}
+
+/* Code blocks - add horizontal scroll when needed */
+pre,
+pre code {
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: hidden;
+  word-break: normal;
+  overflow-wrap: normal;
+  max-width: 100%;
+  display: block;
+}
+
+/* Ensure code blocks don't overflow container */
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent content from overflowing margins */
+.sl-markdown-content,
+main {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure all text elements respect container bounds */
+.sl-markdown-content * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix italic/emphasis to use proper font (not cursive/script) */
+em,
+i,
+.sl-markdown-content em,
+.sl-markdown-content i {
+  font-family: var(--sl-font, "RiformaLLWeb-Regular", sans-serif);
+  font-style: italic;
+  font-variant: normal;
+  font-feature-settings: normal;
+}
+
+/* Ensure emphasis doesn't use script/cursive fonts */
+strong,
+b,
+.sl-markdown-content strong,
+.sl-markdown-content b {
+  font-family: var(--sl-font, "RiformaLLWeb-Regular", sans-serif);
+  font-weight: bold;
+}
+
+/* Ensure footer isn't trapped in a stacking context created by Starlight's main pane */
+.main-pane {
+  isolation: auto;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure main content/footer stack above left sidebar at tablet/desktop */
+@media (min-width: 50rem) {
+  .main-pane { position: relative; z-index: 6 !important; }
+}
+
+/* LinkPreview styling */
+:root {
+  --link-preview-width: 32em;
+  --link-preview-padding-inline: 0.75rem;
+  --link-preview-padding-block: 0.5rem;
+  --link-preview-corners: 0.5rem;
+  --link-preview-description-lines: 3;
+}
+.link-preview {
+  background-color: var(--sl-color-bg, #0b0b0b);
+  color: var(--sl-color-text, #fff);
+  border-radius: var(--link-preview-corners);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.link-preview a {
+  color: var(--sl-color-text-accent);
+  text-decoration: none;
+}
+
+/* Make the logo smaller */
+:root {
+  --sl-nav-height: 3.5rem;
+}
+
+.site-title svg,
+.site-title img {
+  max-height: 2.5rem;
+  height: 1.25rem;
+  width: auto;
+}
+
+/* Add padding to prevent content from being hidden behind fixed footer */
+body {
+  padding-bottom: 4rem;
+}
+
+/* Fix: right sidebar overlay blocking clicks/selection and drawing over footer,
+   while preserving Starlight's responsive width behavior */
+@media (min-width: 72rem) {
+  .right-sidebar {
+    z-index: 0 !important;
+    pointer-events: none;
+  }
+  .right-sidebar * { pointer-events: auto; }
+  .main-pane {
+    position: relative;
+    isolation: auto;
+    z-index: 6 !important;
+  }
+}
+
+/* Pagination - prev on left, next on right */
+.pagination-links {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.pagination-links a {
+  flex: 0 1 auto;
+  max-width: 45%;
+}
+
+.pagination-links a[rel="next"] {
+  margin-left: auto;
+}
+
+.pagination-links .link-title {
+  font-size: var(--sl-text-lg);
+}
