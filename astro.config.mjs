@@ -31,7 +31,7 @@ export default defineConfig({
 				},
 				{
 					tag: 'meta',
-					attrs: { property: 'og:image', content: 'https://matchbox.mallard.sh/docs/og-image.png' },
+					attrs: { property: 'og:image', content: 'https://matchdocs.netlify.app/og-image.png' },
 				},
 				{
 					tag: 'meta',
@@ -55,7 +55,7 @@ export default defineConfig({
 				},
 				{
 					tag: 'meta',
-					attrs: { name: 'twitter:image', content: 'https://matchbox.mallard.sh/docs/og-image.png' },
+					attrs: { name: 'twitter:image', content: 'https://matchdocs.netlify.app/og-image.png' },
 				},
 			],
 			components: {
