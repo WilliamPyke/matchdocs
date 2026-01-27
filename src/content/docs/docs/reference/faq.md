@@ -31,7 +31,7 @@ Matchbox interacts with audited smart contracts on the Mezo Network. However, as
 
 ### How do I get veBTC?
 
-Lock BTC on [Mezo Earn](https://mezo.org/docs/users/mezo-earn/lock/vebtc). Choose your lock duration (1-28 days) and you'll receive a veBTC NFT representing your position.
+Lock BTC on [Mezo Earn](https://mezo.org/earn/lock/lock/vebtc). Choose your lock duration (1-28 days) and you'll receive a veBTC NFT representing your position.
 
 ### What's the minimum lock for veBTC?
 
@@ -62,7 +62,7 @@ Check what comparable gauges are offering and aim for competitive APY. Start con
 
 ### How do I get veMEZO?
 
-Lock MEZO tokens on [Mezo Earn](https://mezo.org/docs/users/mezo-earn/lock/vemezo). Choose your lock duration (1-4 years) and you'll receive a veMEZO NFT with voting power.
+Lock MEZO tokens on [Mezo Earn](https://mezo.org/earn/lock/lock/vemezo). Choose your lock duration (1-4 years) and you'll receive a veMEZO NFT with voting power.
 
 ### What's the minimum lock for veMEZO?
 
@@ -259,7 +259,7 @@ In your wallet, add or switch to the Mezo Network. Check Mezo documentation for 
 
 ### Where can I learn more?
 
-- [Mezo Earn Documentation](https://mezo.org/docs/users/mezo-earn)
+- [Mezo Earn Documentation](https://mezo.org/earn/lock)
 - [Matchbox Guides](/guides/voting)
 - [Glossary](/reference/glossary)
 

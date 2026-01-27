@@ -92,13 +92,7 @@ From each veMEZO card, you can:
 
 ### Voting Power Status
 
-Your voting power display shows:
-
-```
-Total: 1,000 veMEZO
-├── Used: 800 veMEZO (80%)
-└── Available: 200 veMEZO (20%)
-```
+Your voting power display shows your total veMEZO, how much is currently used (allocated to votes), and how much is still available to allocate.
 
 ## Claimable Rewards Section
 

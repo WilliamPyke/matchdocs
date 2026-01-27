@@ -14,7 +14,7 @@ Before you begin, make sure you have:
 - Tokens for incentives (BTC, MEZO, or allowlisted tokens)
 - Understanding of [gauges](/concepts/gauges) and [epochs](/concepts/epochs)
 
-Don't have veBTC yet? Visit [Mezo Earn](https://mezo.org/docs/users/mezo-earn/lock/vebtc) to lock BTC.
+Don't have veBTC yet? Visit [Mezo Earn](https://mezo.org/earn/lock/lock/vebtc) to lock BTC.
 
 ## Quick Start
 

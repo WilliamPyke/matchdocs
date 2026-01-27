@@ -17,7 +17,7 @@ veBTC is the foundation of participation in Mezo's governance and rewards system
 
 ## How to Obtain veBTC
 
-You obtain veBTC by locking BTC on [Mezo Earn](https://mezo.org/docs/users/mezo-earn/lock/vebtc):
+You obtain veBTC by locking BTC on [Mezo Earn](https://mezo.org/earn/lock/lock/vebtc):
 
 1. Visit Mezo Earn
 2. Navigate to the Lock section
@@ -152,4 +152,4 @@ On Matchbox, veBTC holders can:
 
 ## Related Resources
 
-- [Mezo Earn: veBTC Documentation](https://mezo.org/docs/users/mezo-earn/lock/vebtc)
+- [Mezo Earn: veBTC Documentation](https://mezo.org/earn/lock/lock/vebtc)

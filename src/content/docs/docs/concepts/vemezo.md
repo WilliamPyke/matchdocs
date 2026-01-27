@@ -17,7 +17,7 @@ veMEZO is the key to the boosting mechanism in Mezo Earn. Each veMEZO NFT contai
 
 ## How to Obtain veMEZO
 
-You obtain veMEZO by locking MEZO tokens on [Mezo Earn](https://mezo.org/docs/users/mezo-earn/lock/vemezo):
+You obtain veMEZO by locking MEZO tokens on [Mezo Earn](https://mezo.org/earn/lock/lock/vemezo):
 
 1. Visit Mezo Earn
 2. Navigate to the Lock section
@@ -62,19 +62,7 @@ To prevent decay:
 
 ## How veMEZO Works with veBTC
 
-veMEZO's primary function is to **boost veBTC positions**. Here's how the relationship works:
-
-```
-veMEZO Holder                    veBTC Gauge
-     │                               │
-     │ Allocates voting power       │
-     ├──────────────────────────────►│
-     │                               │
-     │                    Boost increased
-     │                               │
-     │ Earns bribes                 │ Higher rewards
-     ◄──────────────────────────────┤
-```
+veMEZO's primary function is to **boost veBTC positions**. veMEZO holders allocate voting power to veBTC gauges, which increases the gauge's boost. In return, veMEZO holders earn bribes while veBTC holders receive higher rewards.
 
 ### The Boost Mechanism
 
@@ -208,4 +196,4 @@ On Matchbox, your veMEZO enables you to:
 
 ## Related Resources
 
-- [Mezo Earn: veMEZO Documentation](https://mezo.org/docs/users/mezo-earn/lock/vemezo)
+- [Mezo Earn: veMEZO Documentation](https://mezo.org/earn/lock/lock/vemezo)

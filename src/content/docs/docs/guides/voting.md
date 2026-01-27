@@ -13,7 +13,7 @@ Before you begin, make sure you have:
 - Small amount of BTC for transaction fees
 - Understanding of [epochs](/concepts/epochs) and timing
 
-Don't have veMEZO yet? Visit [Mezo Earn](https://mezo.org/docs/users/mezo-earn/lock/vemezo) to lock MEZO tokens.
+Don't have veMEZO yet? Visit [Mezo Earn](https://mezo.org/earn/lock/lock/vemezo) to lock MEZO tokens.
 
 ## Quick Start
 

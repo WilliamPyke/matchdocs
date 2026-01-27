@@ -10,12 +10,12 @@ This guide will help you connect to Matchbox and start earning rewards or boosti
 Before using Matchbox, you'll need:
 
 1. **A compatible wallet** — MetaMask or any WalletConnect-compatible wallet
-2. **veBTC and/or veMEZO positions** — Lock BTC or MEZO on [Mezo Earn](https://mezo.org/docs/users/mezo-earn) to receive these NFTs
+2. **veBTC and/or veMEZO positions** — Lock BTC or MEZO on [Mezo Earn](https://mezo.org/earn/lock) to receive these NFTs
 3. **Small amount of BTC** — For transaction fees on Mezo Network
 
 ### Don't have veBTC or veMEZO yet?
 
-Visit [Mezo Earn](https://mezo.org/docs/users/mezo-earn) to:
+Visit [Mezo Earn](https://mezo.org/earn/lock) to:
 
 - Lock BTC (1-28 days) to receive veBTC
 - Lock MEZO (1-4 years) to receive veMEZO
