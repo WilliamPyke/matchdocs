@@ -62,7 +62,7 @@ export default defineConfig({
 				Header: './src/overrides/Header.astro',
 				SocialIcons: './src/overrides/SocialIcons.astro',
 			},
-			favicon: '/favicon.svg',
+			favicon: '/matchbox_icon.png',
 			logo: {
 				src: './src/assets/matchbox-logo.png',
 				replacesTitle: true,
