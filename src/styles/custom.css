@@ -1,11 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* =============================================================================
+   FONT TOGGLE - Change this value to switch fonts:
+   - "instrument-sans" : Instrument Sans (modern sans-serif)
+   - "ibm-plex-mono"   : IBM Plex Mono (monospace)
+   - "courier-new"     : Courier New (classic monospace)
+   ============================================================================= */
+:root {
+  --font-choice: "instrument-sans";
+
+  /* Font definitions */
+  --font-instrument-sans: "Instrument Sans", sans-serif;
+  --font-ibm-plex-mono: "IBM Plex Mono", monospace;
+  --font-courier-new: "Courier New", Courier, monospace;
+}
+
+/* Apply selected font based on --font-choice */
+:root[style*="--font-choice: instrument-sans"],
+:root:not([style*="--font-choice"]) {
+  --selected-font: var(--font-instrument-sans);
+}
+
+:root[style*="--font-choice: ibm-plex-mono"] {
+  --selected-font: var(--font-ibm-plex-mono);
+}
+
+:root[style*="--font-choice: courier-new"] {
+  --selected-font: var(--font-courier-new);
+}
+
 :root {
   --matchbox-orange: #F7931A;
   --matchbox-orange-dark: #FF6B00;
   --matchbox-black: #0D0D0D;
   --sl-content-width: 50rem;
   --sl-text-5xl: 3.5rem;
-  --sl-font: "Courier New", Courier, monospace;
-  --sl-font-mono: "Courier New", Courier, monospace;
+  --sl-font: var(--font-instrument-sans);
+  --sl-font-mono: var(--font-instrument-sans);
   --sl-color-accent-low: #3D2200;
   --sl-color-accent: var(--matchbox-orange);
   --sl-color-accent-high: #FFD9A8;
@@ -14,9 +45,11 @@
   --sl-color-bg-sidebar: #0A0A0A;
 }
 
-/* Force Courier New on all elements */
-html, body, * {
-  font-family: "Courier New", Courier, monospace !important;
+/* Force selected font on all elements */
+html,
+body,
+* {
+  font-family: var(--sl-font) !important;
 }
 
 /* Light mode overrides */
@@ -52,7 +85,7 @@ p {
 
 /* Code styling - inline code should wrap, code blocks should scroll */
 code {
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--sl-font);
   font-style: normal;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -60,7 +93,7 @@ code {
 }
 
 /* Inline code - allow wrapping but prefer keeping together */
-:not(pre) > code {
+:not(pre)>code {
   white-space: normal;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -106,7 +139,7 @@ em,
 i,
 .sl-markdown-content em,
 .sl-markdown-content i {
-  font-family: var(--sl-font, "Courier New", Courier, monospace);
+  font-family: var(--sl-font);
   font-style: italic;
   font-variant: normal;
   font-feature-settings: normal;
@@ -117,7 +150,7 @@ strong,
 b,
 .sl-markdown-content strong,
 .sl-markdown-content b {
-  font-family: var(--sl-font, "Courier New", Courier, monospace);
+  font-family: var(--sl-font);
   font-weight: bold;
 }
 
@@ -130,7 +163,10 @@ b,
 
 /* Ensure main content/footer stack above left sidebar at tablet/desktop */
 @media (min-width: 50rem) {
-  .main-pane { position: relative; z-index: 6 !important; }
+  .main-pane {
+    position: relative;
+    z-index: 6 !important;
+  }
 }
 
 /* LinkPreview styling */
@@ -141,12 +177,14 @@ b,
   --link-preview-corners: 0.5rem;
   --link-preview-description-lines: 3;
 }
+
 .link-preview {
   background-color: var(--sl-color-bg, #0b0b0b);
   color: var(--sl-color-text, #fff);
   border-radius: var(--link-preview-corners);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
+
 .link-preview a {
   color: var(--sl-color-text-accent);
   text-decoration: none;
@@ -176,7 +214,11 @@ body {
     z-index: 0 !important;
     pointer-events: none;
   }
-  .right-sidebar * { pointer-events: auto; }
+
+  .right-sidebar * {
+    pointer-events: auto;
+  }
+
   .main-pane {
     position: relative;
     isolation: auto;
